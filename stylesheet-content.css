@@ -1,0 +1,35 @@
+.main{
+
+	margin: 0px 10%;
+	margin-top: 80px;
+	padding: 5px 20px;
+	background-color: #FFF;
+	box-shadow: -1px 0px 4px grey,1px 0px 4px grey;
+}
+
+.main *{
+	background-color: #FFF;
+}
+
+section{
+	margin: 20px 0px;
+	font-family: roboto;
+	font-size: 16px;
+	text-decoration: none;
+	color: black;
+	overflow: hidden;
+}
+
+.section-withpicleft img{
+	
+	height: 400px;
+	margin-right: 20px;
+	float: left;
+}
+
+.section-withpicright img{
+	
+	float: right;
+	margin-left: 20px;
+	height: 400px;
+}
