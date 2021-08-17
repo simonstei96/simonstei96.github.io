@@ -6,80 +6,112 @@ nav{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 30px 10%;
+	padding: 0px 10%;
 	background-color: #dFfF00;
-	height: 80px;
+
 	box-shadow: 0px 2px 5px grey;
 
 }
 
-nav *{
-	background-color: #dFfF00;
+.nav-logo{
+	display:flex;
+	align-items: center;
+	height:100%;
 }
 
-nav li, a{
-	font-family: roboto;
-	font-size: 25px;
-	text-decoration: none;
-	color: black;
+.nav-logo *{
+	background-color:red;
 }
-
 
 .nav-logo img{
  width:200px;
  height: 50px;
-}
-
-
-nav li{
-	display: inline-block;
-	padding: 5px 20px;
-	list-style:none;
+ background-color:red;
 }
 
 .nav-elems{
-	min-width: 575px;
+	margin-left: 20px;
+	background-color: #dFfF00;
+	min-width: 790px;
+	height:100%;
 }
 
-.nav-elems a{
+.nav-elem{
+	display:inline-block;
+	height:100%;
+}
+
+.nav-elem a{
+	display:block;
+
 	padding: 0px 5px;
 	border-left-style: solid;
 	border-color: limegreen;
 	border-width: 5px;
+	font-family: roboto;
+	font-size: 28px;
+	text-decoration: none;
+	vertical-align:middle;
+	color: black;
 	
 	/*gradien animation*/
+	background-color: #dFfF00;
 	background-image: linear-gradient(greenyellow, greenyellow);
-  background-position: 0% 0%;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+	background-size: 0% 100%;
 	transition: background-size .5s, color .5s;
 }
 
-.nav-elems a:hover{
+.nav-elem > a:hover{
 	background-size: 100% 100%;
 	
 }
 
 .nav-elem-dropdown{
 	display:none;
-	position: absolute;
-	background-color: #FFffFF;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	padding: 0px 5px;
-	z-index: 1;
-  
-	border-left-style: solid;
-	border-color: #80FF80;
-	border-width: 5px;
+	position: relative;
+
+	padding: 0px 0px;
+	/*z-index: 1;
+*/
 	
 	font-size: 20px;
 }
 
 .nav-elem-dropdown *{
 	background-color: #FFffFF;
+	list-style-type:none;
 }
 
-.nav-elems li:hover .nav-elem-dropdown{
+
+.nav-elem:hover .nav-elem-dropdown{
+	display: block;
+}
+
+.nav-elem-dropdown a{
 	display:block;
-	
+	padding:0px 5px;
+	font-size: 1em;
+	background-color: #FFffFF;
+	border-left-style: solid;
+	border-color: #80FF80;
+	border-width: 5px;
+}
+
+.nav-elem-dropdown a:hover{
+	background-color:red;
+}
+
+.nav-elem-dropdown ul{
+	padding-top: 10px;
+	position: absolute;
+	width:100%;
+	background-color: #FFffFF;
+	box-shadow: -1px 0px 2px grey,1px 0px 2px grey, 0px 1px 2px grey;
+
+}
+
+.nav-elem-dropdown li{
+	margin: 5px 0px;
 }
