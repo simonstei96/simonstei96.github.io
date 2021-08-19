@@ -8,7 +8,7 @@ nav{
 	align-items: center;
 	padding: 0px 10%;
 	background-color: #dFfF00;
-
+	
 	box-shadow: 0px 2px 5px grey;
 
 }
@@ -30,6 +30,8 @@ nav{
 }
 
 .nav-elems{
+	display:flex;
+
 	margin-left: 20px;
 	background-color: #dFfF00;
 	min-width: 790px;
@@ -37,25 +39,11 @@ nav{
 }
 
 .nav-elem{
-	display:inline-block;
-	height:100%;
-}
 
-.nav-elem a{
-	display:block;
-
-	padding: 0px 5px;
-	border-left-style: solid;
-	border-color: limegreen;
-	border-width: 5px;
-	font-family: roboto;
-	font-size: 28px;
-	text-decoration: none;
-	vertical-align:middle;
-	color: black;
+	flex-shrink: 0;
+	margin: 5px 10px;
 	
-	/*gradien animation*/
-	background-color: #dFfF00;
+		background-color: #dFfF00;
 	background-image: linear-gradient(greenyellow, greenyellow);
 	background-position: 0% 0%;
 	background-repeat: no-repeat;
@@ -63,19 +51,34 @@ nav{
 	transition: background-size .5s, color .5s;
 }
 
-.nav-elem > a:hover{
+.nav-elem:hover{
 	background-size: 100% 100%;
-	
 }
+
+.nav-elem a{
+	display:block;
+
+	padding: 0px 5px;
+	border-radius: 0px;
+	border-left-style: solid;
+	border-color: limegreen;
+	border-width: 5px;
+	font-family: Roboto, sans-serif;
+	font-size: 28px;
+	text-decoration: none;
+	vertical-align:middle;
+	color: black;
+	background:transparent;
+
+}
+
 
 .nav-elem-dropdown{
 	display:none;
 	position: relative;
 
 	padding: 0px 0px;
-	/*z-index: 1;
-*/
-	
+	background: none;
 	font-size: 20px;
 }
 
@@ -93,25 +96,36 @@ nav{
 	display:block;
 	padding:0px 5px;
 	font-size: 1em;
-	background-color: #FFffFF;
+
 	border-left-style: solid;
 	border-color: #80FF80;
 	border-width: 5px;
+	
+	background-color: #FFffFF;
+	background-image: linear-gradient(#ccFFcc, #ccFFcc);
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+	background-size: 0% 100%;
+	transition: background-size .5s, color .5s;
 }
 
-.nav-elem-dropdown a:hover{
-	background-color:red;
+.nav-elem-dropdown  a:hover{
+	background-size: 100% 100%;
 }
 
 .nav-elem-dropdown ul{
-	padding-top: 10px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 	position: absolute;
 	width:100%;
-	background-color: #FFffFF;
-	box-shadow: -1px 0px 2px grey,1px 0px 2px grey, 0px 1px 2px grey;
-
+	background-color: #cCcCcC;
+box-shadow: 0 2px 8px rgba(0,0,0,.3);
 }
 
 .nav-elem-dropdown li{
 	margin: 5px 0px;
+}
+
+.nav-page > a{
+	
 }
