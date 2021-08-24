@@ -1,14 +1,18 @@
 .main{
-
+	overflow:hidden;
 	margin: 0px 10%;
-	margin-top: 55px;
+	margin-top: 65px;
 	padding: 5px 20px;
 	background-color: #FFF;
 	box-shadow: -1px 0px 4px grey,1px 0px 4px grey;
+	/*min-height: 810px;*/
+	
 }
 
 .main *{
 	background-color: #FFF;
+	overflow:hidden; /*fixed changing nav bar*/
+	
 }
 
 section{
@@ -17,7 +21,7 @@ section{
 	font-size: 16px;
 	text-decoration: none;
 	color: black;
-	overflow: hidden;
+	overflow: visible;
 }
 
 .section-withpicleft img{
@@ -32,4 +36,50 @@ section{
 	float: right;
 	margin-left: 20px;
 	height: 400px;
+}
+
+.kachel-wrapper{
+ display:flex;
+   flex-flow: row wrap;
+ align-items: center;
+ justify-content: center;
+ padding: 5px 5px;
+}
+
+.kachel{
+	overflow:visible;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+	padding: 10px 10px;
+	height: auto;
+	margin: 10px 10px;
+	text-align: center;
+	
+}
+
+.kachel > a{
+	text-decoration:none;
+	font-weight: bold;
+	color: black;
+}
+
+.kachel img{
+	width:250px;
+	height:250px;
+
+}
+
+.kachel:hover img{
+	/*background: linear-gradient(0deg, #00000088 30%, #FfFfFf44 100%);
+mask-image: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,1) 10%);*/
+opacity: 0.75;
+}
+
+.headline{
+	font-size: 25px;
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: middle;
+	
+	margin-top:5px;
+	margin-bottom: 10px;
 }

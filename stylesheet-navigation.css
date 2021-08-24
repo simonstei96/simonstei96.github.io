@@ -1,7 +1,7 @@
 nav{
 	/*overflow: hidden;*/
 	position: fixed;
-	top:0 ;
+	top:0;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -96,7 +96,7 @@ nav{
 	display:block;
 	padding:0px 5px;
 	font-size: 1em;
-
+	
 	border-left-style: solid;
 	border-color: #80FF80;
 	border-width: 5px;
@@ -126,6 +126,4 @@ box-shadow: 0 2px 8px rgba(0,0,0,.3);
 	margin: 5px 0px;
 }
 
-.nav-page > a{
-	
-}
+
