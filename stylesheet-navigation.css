@@ -139,9 +139,10 @@ box-shadow: 0 2px 8px rgba(0,0,0,.3);
 	  display: block;
 	  font-size:28px;
 	  background-color:#dFfF00;
+
   }
   
-  .mobile-nav span{
+  .mobile-nav *{
   background:#dFfF00;
   }
   
@@ -151,6 +152,10 @@ box-shadow: 0 2px 8px rgba(0,0,0,.3);
   
   .nav-elems{
 	  justify-content:float-end;
+  }
+  
+  .mobile-nav a:hover{
+	
   }
 }
 
