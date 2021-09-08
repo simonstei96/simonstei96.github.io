@@ -1,0 +1,238 @@
+<nav>
+<div class="nav-logo">
+<a href="index.html"> <img src="logo.png" alt="Das Logo" > </a>
+</div>
+
+<div class="mobile-nav-elems">
+<a href="#mobile-nav-open" id="mobile-nav-open">
+<span class="fa fa-bars" href=""></span>
+</a>
+<a href="#" id="mobile-nav-close">
+<span class="fa fa-bars" href=""></span>
+</a>
+
+<div id="mobile-menu" class="nav-elems">
+<div class="nav-elem">
+<a href="ernaehrungsberatung.html">Ern&auml;hrungsberatung</a>
+	<div class="nav-elem-dropdown">
+		<ul>
+		<li><a>Ab-/Zunahmeprogramme</a></li>
+		<li><a>Ernährungstherapie</a></li>
+		<li><a>Summerbody-Programm</a></li>
+		</ul>
+	</div>
+</div>
+<div class="nav-elem">
+	<a>Rezept des Monats</a>
+	<div class="nav-elem-dropdown">
+		<ul>
+		<li><a>Unterseite1</a></li>
+		<li><a>Unterseite2</a></li>
+		<li><a>Unterseite3</a></li>
+		</ul>
+	</div>
+	</div>
+<div class="nav-elem">
+	<a>Ueber mich</a>
+	<div class="nav-elem-dropdown">
+		<ul>
+		<li><a>Unterseite1</a></li>
+		<li><a>Unterseite2</a></li>
+		<li><a>Unterseite3</a></li>
+		</ul>
+	</div>
+</div>
+<div class="nav-elem">
+<a>Kontakt</a>
+</div>
+</div>
+</div>
+
+</nav>
+
+/*==============*/
+
+nav{
+	/*overflow: hidden;*/
+	position: fixed;
+	top:0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 10%;
+	background-color: #dFfF00;
+	
+	box-shadow: 0px 2px 5px grey;
+
+}
+
+nav *{
+	  background:#dFfF00;
+}
+
+.nav-logo{
+	display:flex;
+	align-items: center;
+	height:100%;
+}
+
+.nav-logo *{
+	background-color:red;
+}
+
+.nav-logo img{
+ width:200px;
+ height: 50px;
+ background-color:red;
+}
+
+.nav-elems{
+	display:flex;
+
+	margin-left: 20px;
+	background-color: #dFfF00;
+	/*min-width: 790px;*/
+	height:100%;
+}
+
+.nav-elem{
+
+	flex-shrink: 0;
+	margin: 5px 10px;
+	
+		background-color: #dFfF00;
+	background-image: linear-gradient(greenyellow, greenyellow);
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+	background-size: 0% 100%;
+	transition: background-size .5s, color .5s;
+}
+
+.nav-elem:hover{
+	background-size: 100% 100%;
+}
+
+.nav-elem a{
+	display:block;
+
+	padding: 0px 5px;
+	border-radius: 0px;
+	border-left-style: solid;
+	border-color: limegreen;
+	border-width: 5px;
+	font-family: Roboto, sans-serif;
+	font-size: 28px;
+	text-decoration: none;
+	vertical-align:middle;
+	color: black;
+	background:transparent;
+
+}
+
+
+.nav-elem-dropdown{
+	display:none;
+	position: relative;
+
+	padding: 0px 0px;
+	background: none;
+	font-size: 20px;
+}
+
+.nav-elem-dropdown *{
+	background-color: #FFffFF;
+	list-style-type:none;
+}
+
+
+.nav-elem:hover .nav-elem-dropdown{
+	display: block;
+}
+
+.nav-elem-dropdown a{
+	display:block;
+	padding:0px 5px;
+	font-size: 1em;
+	
+	border-left-style: solid;
+	border-color: #80FF80;
+	border-width: 5px;
+	
+	background-color: #FFffFF;
+	background-image: linear-gradient(#ccFFcc, #ccFFcc);
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+	background-size: 0% 100%;
+	transition: background-size .5s, color .5s;
+}
+
+.nav-elem-dropdown  a:hover{
+	background-size: 100% 100%;
+}
+
+.nav-elem-dropdown ul{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: absolute;
+	width:100%;
+	background-color: #cCcCcC;
+box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+
+.nav-elem-dropdown li{
+	margin: 5px 0px;
+}
+
+#mobile-nav-open, #mobile-nav-close{
+	display:none;
+}
+
+@media only screen and (max-width: 1300px) {
+	#mobile-nav-close{
+		display: none;
+		background-color:#dFfF00;
+	}
+	
+	 #mobile-nav-open{
+	  display: block;
+
+	  background-color:#dFfF00;
+
+	}
+	
+	.nav-elems{
+	  display:none;
+	}
+  
+
+  
+  .mobile-nav *{
+  background:#dFfF00;
+  }
+  
+  .mobile-nav-elems > a > span{
+	color: limegreen;
+		  font-size:28px;
+  }
+  
+  .nav-elems + a{
+	  justify-content:float-end;
+	  padding: 5px 5px;
+  }
+  
+	
+   .mobile-nav-elems a#mobile-nav-open:target{
+	display:none;
+  }
+  
+  .mobile-nav-elems a:target ~ #mobile-nav-close{
+	display:block;
+  }
+  
+   .mobile-nav-elems a:target ~ .nav-elems{
+	display:inline-block;
+	left: 0;
+  }
+  
+}
