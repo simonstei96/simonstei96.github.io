@@ -1,12 +1,12 @@
 .main{
-	overflow:hidden;
 	margin: 0px 5px;
 	margin-top: 65px;
 	padding: 5px 20px;
 	background-color: #FFF;
 	box-shadow: -1px 0px 4px grey,1px 0px 4px grey;
 	/*min-height: 810px;*/
-	
+	display: flex;
+		flex-direction: column;
 }
 
 .main *{
@@ -22,18 +22,19 @@ section{
 	text-decoration: none;
 	color: black;
 	overflow: visible;
+
 }
 
 .section-withpicleft img{
-	
+	float: left;
 	height: 400px;
 	margin-right: 20px;
-	float: left;
+
 }
 
 .section-withpicright img{
-	
-	float: right;
+
+	float:right;
 	margin-left: 20px;
 	height: 400px;
 }
@@ -86,7 +87,7 @@ opacity: 0.75;
 
 @media only screen and (min-width: 1270px) {
 .main{
-	overflow:hidden;
+
 	margin: 0px 10%;
 	margin-top: 65px;
 	padding: 5px 20px;

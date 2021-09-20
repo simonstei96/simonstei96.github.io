@@ -74,7 +74,9 @@ header a#mobile-nav-open:target ~ #mobile-nav-close{
 @media only screen and (min-width: 1270px) {
 	
 header a#mobile-nav-close,
-header a#mobile-nav-open{
+header a#mobile-nav-open,
+header a#mobile-nav-close:target ~ #mobile-nav-close,
+header a#mobile-nav-open:target~ #mobile-nav-close{
 	display:none;
 }
 
@@ -84,7 +86,7 @@ header{
 
 
 header nav{
-		all: initial;
+	all: initial;
 	display:flex;
 	margin:0px;
 	width:auto;
